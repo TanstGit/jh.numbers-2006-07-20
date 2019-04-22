@@ -1,0 +1,250 @@
+#! /bin/bash
+# This file will build a file named whatever you want, not 
+# including an existing filename that contains the word values
+# from 1 to a number between 1 and 999
+# later modifications may be added -Jhisson 2006-07-20
+##############################################################
+read -p "enter file name to be created: " filename
+	if [ -f $filename ]
+then
+	eacho "already a file" 
+else 
+	counter=0
+	> $filename
+	number=1001
+	until [ #number -lt 1000 -a $number -gt 0 ]
+	do
+	read -p "Enter a Number value between 1 and 999: " number
+	if [ $number -gt 999 -o $number -lt 1 ]
+	then 
+		echo "Try again" 
+	fi
+	done
+	filesize=`expr $number + 0`
+	while [ $number -ne 0 ] 
+	do
+		if [ $number -ge 900 ] 
+		then 
+			echo -n "NineHundred" >> $filename
+			number=`expr $number -900`
+			counter=`expr $counter + 900`
+		fi
+		if [ $number -ge 800 ] 
+		then 
+			echo -n "EightHundred" >> $filename
+			number=`expr $number - 800`
+			counter=`expr $counter + 800`
+		fi
+		if [ $number -ge 700 ] 
+		then 
+			echo -n "SevenHundred" >> $filename
+			number=`expr $number - 700`
+			counter=`expr $counter + 700`
+		fi
+		if [ $number -ge 600 ] 
+		then 
+			echo -n "SixHundred" >> $filename
+			number=`expr $number - 600`
+			counter=`expr $counter + 600`
+		fi
+		if [ $number -ge 500 ] 
+		then 
+			echo -n "FiveHundred" >> $filename
+			number=`expr $number - 500`
+			counter=`expr $counter + 500`
+		fi
+		if [ $number -ge 400 ] 
+		then 
+			echo -n "FourHundred" >> $filename
+			number=`expr $number - 400`
+			counter=`expr $counter + 400`
+		fi
+		if [ $number -ge 300 ] 
+		then 
+			echo -n "ThreeHundred" >> $filename
+			number=`expr $number - 300`
+			counter=`expr $counter + 300`
+		fi
+		if [ $number -ge 200 ] 
+		then 
+			echo -n "TwoHundred" >> $filename
+			number=`expr $number - 200`
+			counter=`expr $counter + 200`
+		fi
+		if [ $number -ge 100 ] 
+		then 
+			echo -n "OneHundred" >> $filename
+			number=`expr $number - 100`
+			counter=`expr $counter + 100`
+		fi
+		if [ $number -ge 90 ] 
+		then 
+			echo -n "Ninety" >> $filename
+			number=`expr $number - 90`
+			counter=`expr $counter + 90`
+		fi
+		if [ $number -ge 80 ] 
+		then 
+			echo -n "Eighty" >> $filename
+			number=`expr $number - 80`
+			counter=`expr $counter + 80`
+		fi
+		if [ $number -ge 70 ] 
+		then 
+			echo -n "Seventy" >> $filename
+			number=`expr $number - 70`
+			counter=`expr $counter + 70`
+		fi
+		if [ $number -ge 60 ] 
+		then 
+			echo -n "Sixty" >> $filename
+			number=`expr $number - 60`
+			counter=`expr $counter + 60`
+		fi
+		if [ $number -ge 50 ] 
+		then 
+			echo -n "Fifty" >> $filename
+			number=`expr $number - 50`
+			counter=`expr $counter + 50`
+		fi
+		if [ $number -ge 40 ] 
+		then 
+			echo -n "Fourty" >> $filename
+			number=`expr $number - 40`
+			counter=`expr $counter + 40`
+		fi
+		if [ $number -ge 30 ] 
+		then 
+			echo -n "Thirty" >> $filename
+			number=`expr $number - 30`
+			counter=`expr $counter + 30`
+		fi
+		if [ $number -ge 20 ] 
+		then 
+			echo -n "Twenty" >> $filename
+			number=`expr $number - 20`
+			counter=`expr $counter + 20`
+		fi
+		if [ $number -ge 19 ] 
+		then 
+			echo -n "Nineteen" >> $filename
+			number=`expr $number - 19`
+			counter=`expr $counter + 19`
+		fi
+		if [ $number -ge 18 ] 
+		then 
+			echo -n "Eightteen" >> $filename
+			number=`expr $number - 18`
+			counter=`expr $counter + 18`
+		fi
+		if [ $number -ge 17 ] 
+		then 
+			echo -n "Seventeen" >> $filename
+			number=`expr $number - 17`
+			counter=`expr $counter + 17`
+		fi
+		if [ $number -ge 16 ] 
+		then 
+			echo -n "Sixteen" >> $filename
+			number=`expr $number - 16`
+			counter=`expr $counter + 16`
+		fi
+		if [ $number -ge 15 ] 
+		then 
+			echo -n "Fifteen" >> $filename
+			number=`expr $number - 15`
+			counter=`expr $counter + 15`
+		fi
+		if [ $number -ge 14 ] 
+		then 
+			echo -n "Fourteen" >> $filename
+			number=`expr $number - 14`
+			counter=`expr $counter + 14`
+		fi
+		if [ $number -ge 13 ] 
+		then 
+			echo -n "Thirteen" >> $filename
+			number=`expr $number - 13`
+			counter=`expr $counter + 13`
+		fi
+		if [ $number -ge 12 ] 
+		then 
+			echo -n "Twelve" >> $filename
+			number=`expr $number - 12`
+			counter=`expr $counter + 12`
+		fi
+		if [ $number -ge 11 ] 
+		then 
+			echo -n "Eleven" >> $filename
+			number=`expr $number - 11`
+			counter=`expr $counter + 11`
+		fi
+		if [ $number -ge 10 ] 
+		then 
+			echo -n "Ten" >> $filename
+			number=`expr $number - 10`
+			counter=`expr $counter + 10`
+		fi
+		if [ $number -ge 9 ] 
+		then 
+			echo -n "Nine" >> $filename
+			number=`expr $number - 9`
+			counter=`expr $counter + 9`
+		fi
+		if [ $number -ge 8 ] 
+		then 
+			echo -n "Eight" >> $filename
+			number=`expr $number - 8`
+			counter=`expr $counter + 8`
+		fi
+		if [ $number -ge 7 ] 
+		then 
+			echo -n "Seven" >> $filename
+			number=`expr $number - 7`
+			counter=`expr $counter + 7`
+		fi
+		if [ $number -ge 6 ] 
+		then 
+			echo -n "Six" >> $filename
+			number=`expr $number - 6`
+			counter=`expr $counter + 6`
+		fi
+		if [ $number -ge 5 ] 
+		then 
+			echo -n "Five" >> $filename
+			number=`expr $number - 5`
+			counter=`expr $counter + 5`
+		fi
+		if [ $number -ge 4 ] 
+		then 
+			echo -n "Four" >> $filename
+			number=`expr $number - 4`
+			counter=`expr $counter + 4`
+		fi
+		if [ $number -ge 3 ] 
+		then 
+			echo -n "Three" >> $filename
+			number=`expr $number - 3`
+			counter=`expr $counter + 3`
+		fi
+		if [ $number -ge 2 ] 
+		then 
+			echo -n "Two" >> $filename
+			number=`expr $number - 2`
+			counter=`expr $counter + 2`
+		fi
+		if [ $number -ge 1 ] 
+		then 
+			echo -n "One" >> $filename
+			number=`expr $number - 1`
+			counter=`expr $counter + 1`
+		fi
+		number=`expr $counter -1`
+		counter=0
+		echo -e "\r" >> $filename
+	done
+echo "You now have a file with $filesize entries"
+	counter=`expr $counter + 900`
+tac $filename > file2
+cat file2 >$filename
+fi
